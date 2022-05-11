@@ -1,6 +1,6 @@
 package entidad;
 
-public class Fruta implements Comparable<Fruta>{
+public class Fruta{
     private NombreYPrecio nombreYPrecio;
     private String unidadDeVenta;
 
@@ -33,10 +33,6 @@ public class Fruta implements Comparable<Fruta>{
         return String.format("Nombre: %s /// Precio: $%.0f /// Unidad de venta: %s",this.nombreYPrecio.getNombre(),this.nombreYPrecio.getPrecio(),this.unidadDeVenta);
     }
 
-    @Override
-    public int compareTo(Fruta o) {
-        return 0;
-    }
 }
 /*
 *
