@@ -1,23 +1,14 @@
 package entidad;
 
-public class Shampoo {
-    private NombreYPrecio nombreYPrecio;
+public class Shampoo extends NombreYPrecio{
     private Short cantidadDeMiliLitro;
 
     public Shampoo() {
     }
 
-    public Shampoo(NombreYPrecio nombreYPrecio, Short cantidadDeMiliLitro) {
-        this.nombreYPrecio = nombreYPrecio;
+    public Shampoo(String nombre,Float precio, Short cantidadDeMiliLitro) {
+        super(nombre,precio);
         this.cantidadDeMiliLitro = cantidadDeMiliLitro;
-    }
-
-    public NombreYPrecio getNombreYPrecio() {
-        return nombreYPrecio;
-    }
-
-    public void setNombreYPrecio(NombreYPrecio nombreYPrecio) {
-        this.nombreYPrecio = nombreYPrecio;
     }
 
     public Short getCantidadDeMiliLitro() {
@@ -30,7 +21,7 @@ public class Shampoo {
 
     @Override
     public String toString() {
-        return String.format("Nombre: %s /// Contenido: %dml /// Precio: $%.0f",this.nombreYPrecio.getNombre(),this.cantidadDeMiliLitro,this.nombreYPrecio.getPrecio());
+        return String.format("Nombre: %s /// Contenido: %dml /// Precio: $%.0f",super.getNombre(),this.cantidadDeMiliLitro,super.getPrecio());
     }
 }
 /*

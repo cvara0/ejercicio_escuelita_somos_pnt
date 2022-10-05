@@ -1,24 +1,17 @@
 package entidad;
 
-public class Fruta{
-    private NombreYPrecio nombreYPrecio;
+public class Fruta extends NombreYPrecio{
+
     private String unidadDeVenta;
 
     public Fruta() {
     }
 
-    public Fruta(NombreYPrecio nombreYPrecio, String unidadDeVenta) {
-        this.nombreYPrecio = nombreYPrecio;
+    public Fruta(String nombre,Float precio, String unidadDeVenta) {
+        super(nombre, precio);
         this.unidadDeVenta = unidadDeVenta;
     }
 
-    public NombreYPrecio getNombreYPrecio() {
-        return nombreYPrecio;
-    }
-
-    public void setNombreYPrecio(NombreYPrecio nombreYPrecio) {
-        this.nombreYPrecio = nombreYPrecio;
-    }
 
     public String getUnidadDeVenta() {
         return unidadDeVenta;
@@ -30,7 +23,7 @@ public class Fruta{
 
     @Override
     public String toString() {
-        return String.format("Nombre: %s /// Precio: $%.0f /// Unidad de venta: %s",this.nombreYPrecio.getNombre(),this.nombreYPrecio.getPrecio(),this.unidadDeVenta);
+        return String.format("Nombre: %s /// Precio: $%.0f /// Unidad de venta: %s",super.getNombre(),super.getPrecio(),this.unidadDeVenta);
     }
 
 }

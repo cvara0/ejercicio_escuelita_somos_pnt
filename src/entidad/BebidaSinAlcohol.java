@@ -1,23 +1,15 @@
 package entidad;
 
-public class BebidaSinAlcohol {
-    private NombreYPrecio nombreYPrecio;
+public class BebidaSinAlcohol extends NombreYPrecio{
+
     private Float cantidadDeLitro;
 
     public BebidaSinAlcohol() {
     }
 
-    public BebidaSinAlcohol(NombreYPrecio nombreYPrecio, Float cantidadDeLitro) {
-        this.nombreYPrecio = nombreYPrecio;
+    public BebidaSinAlcohol(String nombre,Float precio, Float cantidadDeLitro) {
+        super(nombre,precio);
         this.cantidadDeLitro = cantidadDeLitro;
-    }
-
-    public NombreYPrecio getNombreYPrecio() {
-        return nombreYPrecio;
-    }
-
-    public void setNombreYPrecio(NombreYPrecio nombreYPrecio) {
-        this.nombreYPrecio = nombreYPrecio;
     }
 
     public Float getCantidadDeLitro() {
@@ -30,7 +22,7 @@ public class BebidaSinAlcohol {
 
     @Override
     public String toString() {
-        return String.format("Nombre: %s /// Litros: %.1f /// Precio: $%.0f",this.nombreYPrecio.getNombre(),this.cantidadDeLitro,this.nombreYPrecio.getPrecio());
+        return String.format("Nombre: %s /// Litros: %.1f /// Precio: $%.0f",super.getNombre(),this.cantidadDeLitro,super.getPrecio());
     }
 }
 

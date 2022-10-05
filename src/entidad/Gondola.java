@@ -1,13 +1,13 @@
 package entidad;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 public class Gondola{
     private List<Object> listaProducto=new ArrayList<>();
-    private List<NombreYPrecio> listaNombreYPrecio=new ArrayList<>();
+    private final List<NombreYPrecio> listaNombreYPrecio=new ArrayList<>();
+
     public Gondola() {
     }
 
@@ -17,13 +17,13 @@ public class Gondola{
 
     public List<Object> cargarGondola(){
         listaNombreYPrecio.add(new NombreYPrecio("Coca-Cola Zero", 20F));
-        listaProducto.add(new BebidaSinAlcohol(new NombreYPrecio("Coca-Cola Zero", 20F), 1.5F));
+        listaProducto.add(new BebidaSinAlcohol("Coca-Cola Zero", 20F, 1.5F));
         listaNombreYPrecio.add(new NombreYPrecio("Coca-Cola", 18F));
-        listaProducto.add(new BebidaSinAlcohol(new NombreYPrecio("Coca-Cola", 18F), 1.5F));
+        listaProducto.add(new BebidaSinAlcohol("Coca-Cola", 18F, 1.5F));
         listaNombreYPrecio.add(new NombreYPrecio("Sedal", 19F));
-        listaProducto.add(new Shampoo(new NombreYPrecio("Sedal", 19F), (short) 500));
+        listaProducto.add(new Shampoo("Sedal", 19F, (short) 500));
         listaNombreYPrecio.add(new NombreYPrecio("Frutillas", 64.00F));
-        listaProducto.add(new Fruta(new NombreYPrecio("Frutillas", 64.00F),"kilo"));
+        listaProducto.add(new Fruta("Frutillas", 64.00F,"kilo"));
         return listaProducto;
     }
 
